@@ -1,0 +1,108 @@
+
+
+ID:10523894
+Exercise_2
+#Q1.
+num = int(input("Enter a number: "))
+
+
+if num > 1:
+   
+   for i in range(2,num):
+       if (num % i) == 0:
+           print(num,"is not a prime number")
+           print(i,"times",num//i,"is",num)
+           break
+   else:
+       print(num,"is a prime number")
+       
+
+else:
+   print(num,"is not a prime number")
+
+
+#function test:
+Enter a number: 541
+541 is a prime number
+
+Enter a number: 7919
+7919 is a prime number
+
+Enter a number: 7641
+7641 is not a prime number
+3 times 2547 is 7641
+
+Enter a number: 5383
+5383 is not a prime number
+7 times 769 is 5383
+
+
+
+#Q2
+import math as m
+
+def f(f,t,h):
+    r = (f(t+h)-f(t))/h
+    return r
+
+#function test:
+#i.
+>>> fp= f(lambda t:m.sqrt(3*t**2-2),1,0.005)
+>>> print(fp)
+2.9852211369092885
+
+#ii.
+>>> fp= f(lambda t:m.cos(t**2),m.pi/3,0.001)
+>>> print(fp)
+-1.8652119405227485
+
+
+#Q3.
+import math as m
+import cmath as cm
+
+print("Enter the respective coffefficients of a,b and c ")
+a = float(input("Enter the corresponding value of a : "))
+b = float(input("Enter the corresponding value of b : "))
+c = float(input("Enter the corresponding value of c : "))
+
+d= (b**2) - (4*a*c)
+if d > 0:
+
+    x1 = ((-b )+ (m.sqrt(d)))/(2*a)
+    x2 = ((-b) - (m.sqrt(d)))/(2*a)
+
+else:
+    x1 = ((-b )+ (cm.sqrt(d)))/(2*a)
+    x2 = ((-b) - (cm.sqrt(d)))/(2*a)
+    
+
+print (x1, x2)
+   
+#i.x^2+2x-7
+Enter the respective coffefficients of a,b and c 
+Enter the corresponding value of a : 1
+Enter the corresponding value of b : 2
+Enter the corresponding value of c : -7
+1.8284271247461903 -3.8284271247461903
+
+#ii.x^2-1
+Enter the respective coffefficients of a,b and c 
+Enter the corresponding value of a : 1
+Enter the corresponding value of b : 0
+Enter the corresponding value of c : -1
+1.0 -1.0
+
+#iii.x^2+2x+1
+Enter the respective coffefficients of a,b and c 
+Enter the corresponding value of a : 1
+Enter the corresponding value of b : 2
+Enter the corresponding value of c : 1
+(-1+0j) (-1+0j)
+
+#iv.2x^2+4x+4
+Enter the respective coffefficients of a,b and c 
+Enter the corresponding value of a : 2
+Enter the corresponding value of b : 4
+Enter the corresponding value of c : 4
+(-1+1j) (-1-1j)
